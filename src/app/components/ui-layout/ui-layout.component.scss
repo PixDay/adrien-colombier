@@ -1,0 +1,36 @@
+.absolute {
+    position: absolute;
+    z-index: 2;
+}
+
+.languages {
+    position: fixed;
+    bottom: 16px;
+    color: #FFF;
+    right: 26px;
+    display: flex;
+}
+
+.language {
+    margin-left: 16px;
+    cursor: pointer;
+    color: #FFF;
+    transition: color 0.3s;
+}
+
+.language:hover {
+    color: #ff4655;
+    transition: color 0.3s;
+}
+
+.networks {
+    position: fixed;
+    left: 64px;
+    height: 100%;
+    margin: auto;
+    color: #FFF;
+}
+
+.network {
+
+}
