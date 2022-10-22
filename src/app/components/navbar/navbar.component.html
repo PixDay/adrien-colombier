@@ -1,7 +1,15 @@
 <div class="navbar">
     <div class="mobile">
         <h1 class="name">Adrien Colombier</h1>
-        <mat-icon class="menu-icon">menu</mat-icon>
+        <mat-icon class="menu-icon" (click)="toggleMobileMenu()">menu</mat-icon>
+        <div class="menu-mobile" *ngIf="mobileMenuDisplay">
+            <mat-icon class="close-icon" (click)="toggleMobileMenu()">close</mat-icon>
+            <div class="nav-button-mobile">Home</div>
+            <div class="nav-button-mobile">About</div>
+            <div class="nav-button-mobile">Projects</div>
+            <div class="nav-button-mobile">Contact</div>
+            <img class="drone-flying" src="/assets/illustrations/flying-drone.svg" />
+        </div>
     </div>
     <div class="desktop">
         <h1 class="name">Adrien Colombier</h1>
