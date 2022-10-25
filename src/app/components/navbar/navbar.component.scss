@@ -52,6 +52,10 @@ h1 {
     transition: color 0.3s;
 }
 
+.active {
+    color: #ff4655;
+}
+
 /* MOBILE RULES */
 @media (max-width: 768px) {
     .desktop {

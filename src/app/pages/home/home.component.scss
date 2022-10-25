@@ -5,6 +5,10 @@
     background-color: #161616;
 }
 
+.pusher {
+    padding-top: 96px;
+}
+
 #myVideo {
     position: fixed;
     right: 0;
@@ -17,5 +21,235 @@
 .main-container {
     width: 100%;
     height: 100%;
-    background-image: url("/assets/images/home-background.jpg");
+    //background-image: url("/assets/images/background.webp");
+    background-color: #1D1D1D;
 }
+
+.home-container {
+    padding-left: 86px;
+    height: 85%;
+}
+
+/* MOBILE RULES */
+@media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-start;
+        color: #FFF;
+    }
+
+    .home-container {
+        padding-right: 32px;
+    }
+
+    .profile-picture {
+        width: 128px;
+        height: 128px;
+        border-radius: 100%;
+        margin-top: 48px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 24px;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 16px;
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 8px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .control-panel {
+        width: 80%;
+        height: 40%;
+        margin-top: 32px;
+    }
+}
+
+/* DESKTOP RULES */
+@media (min-width: 769px) {
+    .mobile {
+        display: none;
+    }
+
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        margin-top: 64px;
+        margin-left: 32px;
+    }
+
+    .first-line {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        color: #FFF;
+    }
+
+    .image-text {
+        margin-left: 32px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 75px;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 16px;
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 8px;
+        font-weight: 300;
+        max-width: 450px;
+    }
+
+    .red-service {
+        color: #FF637B;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+
+    .services {
+        margin-left: 32px;
+        color: #FFF;
+    }
+
+    .service-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 16px;
+    }
+
+    .illustrations {
+        width: 60%;
+        margin-right: 64px;
+    }
+}
+
+
+
+
+
+/* BUBBLES */
+body {
+    background: #1a1e23;
+    margin: 0;
+  }
+  
+  $bubble-count: 50;
+  $sway-type: "sway-left-to-right", "sway-right-to-left";
+  
+  @function random_range($min, $max) {
+    $rand: random();
+    $random_range: $min + floor($rand * (($max - $min) + 1));
+    @return $random_range;
+  }
+  
+  @function sample($list) {
+    @return nth($list, random(length($list)));
+  }
+  
+  .bubbles {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    left: var(--bubble-left-offset);
+    bottom: -75%;
+    display: block;
+    width: var(--bubble-radius);
+    height: var(--bubble-radius);
+    border-radius: 50%;
+    animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite;
+  
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: hsla(351, 89%, 52%, 0.144);
+      border-radius: inherit;
+      animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
+    }
+  
+    @for $i from 0 through $bubble-count {
+      &:nth-child(#{$i}) {
+        --bubble-left-offset: #{random_range(0vw, 100vw)};
+        --bubble-radius: #{random_range(1vw, 5vw)};
+        --bubble-float-duration: #{random_range(6s, 12s)};
+        --bubble-sway-duration: #{random_range(4s, 6s)};
+        --bubble-float-delay: #{random_range(0s, 4s)};
+        --bubble-sway-delay: #{random_range(0s, 4s)};
+        --bubble-sway-type: #{sample($sway-type)};
+      }
+    }
+  }
+  
+  @keyframes float-up {
+    to {
+      transform: translateY(-175vh);
+    }
+  }
+  
+  @keyframes sway-left-to-right {
+    from {
+      transform: translateX(-100%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes sway-right-to-left {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  }

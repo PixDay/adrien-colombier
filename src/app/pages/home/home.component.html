@@ -1,4 +1,61 @@
 <adrien-ui-layout></adrien-ui-layout>
-<div class="main-container">
-    <adrien-navbar class="fixed"></adrien-navbar>
+<div class="bubbles">
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="main-container">
+      <adrien-navbar class="fixed" [active]="0"></adrien-navbar>
+      <div class="pusher"></div>
+
+      <div class="home-container mobile">
+        <img src="/assets/images/adrien-colombier.jpg" class="profile-picture" />
+        <h1>Adrien Colombier</h1>
+        <h2>Software Engineer</h2>
+        <h3>I'm creating web applications and pilote drones</h3>
+        <img class="control-panel" src="/assets/illustrations/control-panel.svg" />
+      </div>
+
+      <div class="home-container desktop">
+        <div class="first-line">
+          <img src="/assets/images/adrien-colombier.jpg" class="profile-picture" />
+          <div class="image-text">
+            <h1>Adrien Colombier</h1>
+            <h2>Software Engineer </h2>
+            <h3>
+              Innovative Programmer and C / C++ Software Engineer and Internet Entrepreneur striving to make
+              the world a more unified and connected place. A creative thinker, adept in software development
+              and working with various data structures.
+            </h3>
+          </div>
+        </div>
+        <div class="services">
+          <h1>Services I offer:</h1>
+          <div class="service-row">
+            <div class="service">
+              <h2 class="red-service">Drones</h2>
+              <img class="illustrations" src="/assets/illustrations/flying-drone.svg" />
+            </div>
+            <div class="service">
+              <h2 class="red-service">Web applications</h2>
+              <img class="illustrations" src="/assets/illustrations/project-maker.svg" />
+            </div>
+            <div class="service">
+              <h2 class="red-service">Teaching</h2>
+              <img class="illustrations" src="/assets/illustrations/teaching-class.svg" />
+            </div>
+        </div>
+        </div>
+      </div>
+  </div>
 </div>

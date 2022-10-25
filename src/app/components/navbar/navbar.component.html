@@ -4,21 +4,22 @@
         <mat-icon class="menu-icon" (click)="toggleMobileMenu()">menu</mat-icon>
         <div class="menu-mobile" *ngIf="mobileMenuDisplay">
             <mat-icon class="close-icon" (click)="toggleMobileMenu()">close</mat-icon>
-            <div class="nav-button-mobile">Home</div>
-            <div class="nav-button-mobile">About</div>
-            <div class="nav-button-mobile">Projects</div>
-            <div class="nav-button-mobile">Contact</div>
+            <div class="nav-button-mobile {{activeClass[0]}}">Home</div>
+            <div class="nav-button-mobile {{activeClass[1]}}">About</div>
+            <div class="nav-button-mobile {{activeClass[2]}}">Projects</div>
+            <div class="nav-button-mobile {{activeClass[3]}}">Education</div>
+            <div class="nav-button-mobile {{activeClass[4]}}">Contact</div>
             <img class="drone-flying" src="/assets/illustrations/flying-drone.svg" />
         </div>
     </div>
     <div class="desktop">
         <h1 class="name">Adrien Colombier</h1>
         <div class="button-container">
-            <div class="nav-button">HOME</div>
-            <div class="nav-button">ABOUT</div>
-            <div class="nav-button">PROJECTS</div>
-            <div class="nav-button">EDUCATION</div>
-            <div class="nav-button">CONTACT</div>
+            <div class="nav-button {{activeClass[0]}}">HOME</div>
+            <div class="nav-button {{activeClass[1]}}">ABOUT</div>
+            <div class="nav-button {{activeClass[2]}}">PROJECTS</div>
+            <div class="nav-button {{activeClass[3]}}">EDUCATION</div>
+            <div class="nav-button {{activeClass[4]}}">CONTACT</div>
         </div>
     </div>
 </div>
