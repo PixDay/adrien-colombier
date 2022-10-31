@@ -158,7 +158,7 @@
     }
 
     .illustrations {
-        width: 60%;
+        width: 55%;
         margin-right: 64px;
     }
 }
@@ -190,8 +190,20 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    scrollbar-width: thin;
   }
+
+  ::-webkit-scrollbar
+{
+  width: 2px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background-color: #E40425;
+}
   
   .bubble {
     position: absolute;

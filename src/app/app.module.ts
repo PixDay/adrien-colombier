@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // ANGULAR MATERIAL COMPONENTS //
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 // PERSONNAL COMPONENTS //
 
@@ -37,7 +37,8 @@ import { UiLayoutComponent } from './components/ui-layout/ui-layout.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
